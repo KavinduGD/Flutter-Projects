@@ -3,6 +3,7 @@ import 'package:food_app/cus_widgets/big_text.dart';
 import 'package:food_app/cus_widgets/small_text.dart';
 import 'package:food_app/home/food_page_body.dart';
 import 'package:food_app/utils/colors.dart';
+import 'package:food_app/utils/dimensions.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -20,7 +21,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
         children: [
           Container(
             child: Container(
-              margin: const EdgeInsets.only(top: 45, bottom: 15),
+              margin:
+                  EdgeInsets.only(top: Dimensions.height15 * 3.5, bottom: 15),
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
