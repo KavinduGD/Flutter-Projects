@@ -94,22 +94,29 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         children: [
           Container(
             height: Dimensions.pageViewContainer,
-            margin: const EdgeInsets.only(left: 10, right: 10),
+            margin: EdgeInsets.only(
+                left: Dimensions.width10, right: Dimensions.width10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: const DecorationImage(
-                    image: AssetImage("assets/image/food1.png"),
-                    fit: BoxFit.cover)),
+              borderRadius: BorderRadius.circular(Dimensions.radius30),
+              image: const DecorationImage(
+                  image: AssetImage("assets/image/food1.png"),
+                  fit: BoxFit.cover),
+            ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
               padding: EdgeInsets.only(
-                  left: 15, right: 15, top: Dimensions.height15),
+                  left: Dimensions.width15,
+                  right: Dimensions.width15,
+                  top: Dimensions.height10),
               height: Dimensions.pageViewTextContainer,
-              margin: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
+              margin: EdgeInsets.only(
+                  left: Dimensions.width30,
+                  right: Dimensions.width30,
+                  bottom: Dimensions.height30),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
                 color: Colors.white,
                 boxShadow: const [
                   BoxShadow(
@@ -142,23 +149,23 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                             (index) => Icon(
                                   Icons.star,
                                   color: AppColors.mainColor,
-                                  size: 15,
+                                  size: Dimensions.width15,
                                 )),
                       ),
-                      const SizedBox(
-                        width: 18,
+                      SizedBox(
+                        width: Dimensions.width20,
                       ),
                       const SmallText(
                         text: "4.5",
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: Dimensions.width10,
                       ),
                       const SmallText(text: 'comments')
                     ],
                   ),
                   SizedBox(
-                    height: Dimensions.height20 * 0.6,
+                    height: Dimensions.height20,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -179,11 +186,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         iconColor: AppColors.iconColor2,
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
