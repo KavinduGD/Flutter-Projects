@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/cus_widgets/app_icon.dart';
 import 'package:food_app/cus_widgets/big_text.dart';
 import 'package:food_app/cus_widgets/details_column.dart';
+import 'package:food_app/cus_widgets/expandable_text.dart';
 import 'package:food_app/utils/colors.dart';
 import 'package:food_app/utils/dimensions.dart';
 
@@ -14,6 +15,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          //background Image
           Positioned(
             left: 0,
             right: 0,
@@ -26,6 +28,7 @@ class PopularFoodDetail extends StatelessWidget {
                       image: AssetImage("assets/image/food1.png"))),
             ),
           ),
+          //icons
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -40,6 +43,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //Intriductions
           Positioned(
             left: 0,
             right: 0,
@@ -78,6 +82,8 @@ class PopularFoodDetail extends StatelessWidget {
               ),
             ),
           ),
+          //expendibleText
+          ExpandableText(text: "ass"),
         ],
       ),
       bottomNavigationBar: Container(
