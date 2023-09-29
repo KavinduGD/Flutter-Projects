@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/cus_widgets/small_text.dart';
+import 'package:food_app/utils/colors.dart';
 import 'package:food_app/utils/dimensions.dart';
 
 class ExpandableText extends StatefulWidget {
@@ -37,15 +38,40 @@ class _ExpandableTextState extends State<ExpandableText> {
       child: secondHalf.isEmpty
           ? SmallText(
               text: widget.text,
+              size: Dimensions.font16,
+              color: AppColors.paraColor,
+              height: 1.6,
             )
           : Column(
               children: [
                 SmallText(
-                  text: hiddenText
-                      ? (firstHalf + "...")
-                      : (firstHalf + secondHalf),
+                  text:
+                      hiddenText ? ("$firstHalf...") : (firstHalf + secondHalf),
+                  size: Dimensions.font16,
+                  color: AppColors.paraColor,
+                  height: 1.6,
                 ),
-                InkWell(onTap: ,)
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      hiddenText = !hiddenText;
+                    });
+                  },
+                  child: Row(
+                    children: [
+                      SmallText(
+                        text: hiddenText ? "Show more" : "Shoe less",
+                        color: AppColors.mainColor,
+                      ),
+                      Icon(
+                        hiddenText
+                            ? Icons.arrow_drop_down
+                            : Icons.arrow_drop_up,
+                        color: AppColors.mainColor,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
     );

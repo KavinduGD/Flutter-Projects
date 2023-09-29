@@ -78,12 +78,21 @@ class PopularFoodDetail extends StatelessWidget {
                   BigText(
                     text: "Introduce",
                   ),
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  const Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableText(
+                        text:
+                            "The 'Foundations of Cybersecurity' course is essential for my goals. It's all about keeping things safe on the internet, which is super important these days. This course will teach me the basics of how to do that. Once I finish it, I'll be ready for a job in cybersecurity. I'll be able to protect computers and information from bad people who want to do harm. This course is like my first step into a cool career where I can make a big difference. But, I can't do it alone because I'm a student without any money to spare. That's why I'm asking for financial aid. With your help, I can take this course and start working toward my dream of being a cybersecurity expert. Your support means the world to me,are. That's why I'm asking for financial aid. With your help, I can take this course and start working toward my dream of being a cybersecurity expert. Your support means the world to me, and it will set me on the right path for a successful future in this important fieldare. That's why I'm asking for financial aid. With your help, I can take this course and start working toward my dream of being a cybersecurity expert. Your support means the world to me, and it will set me on the right path for a successful future in this important field and it will set me on the right path for a successful future in this important fielorking toward my dream of being a cybersecurity expert. Your support means the world to me, and it will set me on the right path for a successful future in this important fieldare. That's why I'm asking for financial aid. With your help, I can take this course and start working toward my dream of being a cybersecurity expert. Your support means the world to me, and it will set me on the right path for a successful future in this important field and it will set me on the right path for a successful future in this important fielorking toward my dream of being a cybersecurity expert. Your support means the world to me, and it will set me on the right path for a successful future in this important fieldare. That's why I'm asking for financial aid. With your help, I can take this course and start working toward my dream of being a cybersecurity expert. Your support means the world to me, and it will set me on the right path for a successful future in this important field and it will set me on the right path for a successful future in this important field",
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
           ),
-          //expendibleText
-          ExpandableText(text: "ass"),
         ],
       ),
       bottomNavigationBar: Container(
